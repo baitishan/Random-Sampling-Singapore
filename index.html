@@ -108,6 +108,13 @@
       
 
             data = { "100_random_points" : [
+               
+                {
+                    "ID": "0",
+                    "Latitude": "1.3224758705716029",
+                    "Longtitude": "103.81410871017252",
+                    "Visited" : "Start"
+                },
                 {
                     "ID": "1",
                     "Latitude": "1.223971",
@@ -635,6 +642,18 @@
                         optimized: false,
                         icon: {
                           url: "https://raw.githubusercontent.com/baitishan/Random-Sampling-Singapore/main/icons8-star-48.png"
+                        }
+                    });
+                  } else if (data["100_random_points"][i].Visited == "Start") {
+                    console.log("Visited");
+                    var marker = new google.maps.Marker({
+                        position:point, 
+                        map:map, 
+                        title: "test",
+                        label: data["100_random_points"][i].ID,
+                        optimized: false,
+                        icon: {
+                          url: "https://raw.githubusercontent.com/baitishan/Random-Sampling-Singapore/main/iconfinder_4905477_hand_push_start_icon.svg"
                         }
                     });
                   } else {
