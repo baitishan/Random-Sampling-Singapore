@@ -9,9 +9,7 @@
     <div>
         <form action="thecontroller/post" method="post" id="buttons">
             <div class="select_direct">
-                A<input type="radio" value="A" name="letter" />
-                B<input type="radio" value="B" name="letter" />
-                C<input type="radio" value="C" name="letter" />
+                <input type="text" value="" name="letter" />
             </div>    
          <input type="submit" name="add">
         </form>
@@ -20,6 +18,13 @@
     <div style="width: 600px;"></div>
     <div id="map" style="width: 1150px; height: 750px"></div>
     <script type="text/javascript">
+        
+        const form = document.getElementById("buttons");
+            form.addEventListener("submit", (e)=>{
+              e.preventDefault();
+             console.log(document.querySelector('input[name="letter"]').value);
+        });
+        
         var polygon;
 
         var allMarkers = [];
