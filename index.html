@@ -7,8 +7,15 @@
     <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyCIa61P_h-TjKiF6iZYh_LgJjSRkv69IQA"></script>
 
     <div>
-        Enter ID you are searching for: <input id="number" type="text" />
-        <button type="button" onclick="alert('Hello world!')">Click Me!</button>
+        <form action="thecontroller/post" method="post" id="buttons">
+            <div class="select_direct">
+                A<input type="radio" value="A" name="letter" />
+                B<input type="radio" value="B" name="letter" />
+                C<input type="radio" value="C" name="letter" />
+            </div>    
+         <input type="submit" name="add">
+        </form>
+        
     </div>
     <div style="width: 600px;"></div>
     <div id="map" style="width: 1150px; height: 750px"></div>
